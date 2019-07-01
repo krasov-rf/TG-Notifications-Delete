@@ -11,7 +11,7 @@ class FilterAwesome(BaseFilter):
         if message.chat.username in groups:
         	new_members = message.new_chat_members
         	left_member = message.left_chat_member
-            if new_members != [] or left_member != []:
+            if new_members or left_member:
             	return True
         return False
 
